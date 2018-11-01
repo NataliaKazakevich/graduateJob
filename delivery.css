@@ -1,0 +1,22 @@
+p{
+    margin: 10px;
+    text-indent: 1.5em;
+    text-align: justify;  
+    font-size: 18px;
+}
+
+.korz{
+    border-radius: 50px;
+    background: #ffffff;
+    margin-right: 5%;
+    padding: 17px;
+}
+
+@media screen and (max-width: 805px){
+    p{
+        margin: 10px;
+        text-indent: 1.5em;
+        text-align: justify;  
+        font-size: 14px;    
+    }
+}

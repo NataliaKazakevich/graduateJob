@@ -1,0 +1,55 @@
+body{
+width: 100%;
+position:relative;
+margin:0 auto;
+margin-top:0px; 
+background: rgb(220, 240, 248);
+}
+
+section{
+    background: rgb(208, 243, 243);
+}
+
+h1{
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+p{
+    text-indent: 1.5em;
+    text-align: justify;
+    margin: 10px;
+}
+
+.tel{
+    margin-right: 400px;
+}
+
+.korz{
+    border-radius: 50px;
+    background: #ffffff;
+    margin-right: 5%;
+    padding: 17px;
+}
+
+/*.carousel-inner{
+    margin-top: 10px;
+    margin-left: 400px;
+   
+}*/
+
+@media screen and (max-width: 805px){
+    p{
+        text-indent: 1.5em;
+        text-align: justify;
+        margin: 10px;
+        
+    }
+}
+  
+
+
+   
+
+

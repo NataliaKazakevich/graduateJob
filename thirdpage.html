@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="wicart.css" />
+    <link rel="stylesheet" type="text/css" href="thirdpage.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+	<script src="wicart.js"  type="text/javascript" ></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+			crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+            <title>Товар</title>
+</head>
+<body>
+    <header class="p-3 mb-2 bg-info text-white">
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <img src="./foto/logo.jpg" width="80" height="80"> <!-- Рисунок логотипа-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbar1" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+     <div class="collapse navbar-collapse" id="navbar1">
+          <h1>Глушители Ferroz</h1>
+             <ul class="navbar-nav mr-auto">
+
+               <!--menu-->
+                 <li class="nav-item active">
+                    <a class="nav-link" href="./main.html" >Главная
+                        <span class="sr-only"></span>
+                    </a>
+                 </li>
+
+                <li class="nav-item dropdown">
+                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true"
+                     aria-expanded="false">Каталог товаров</a>
+                   <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                       <a class="dropdown-item" href="./catalog.html">Глушители</a>
+                       <a class="dropdown-item" href="./catalog.html">Гофры</a>
+                       <a class="dropdown-item" href="./catalog.html">Пламегасители</a>
+                       <a class="dropdown-item" href="./catalog.html">катализаторы</a>
+                        <div class="dropdown-divider"></div>
+                           <a class="dropdown-item" href="./catalog.html">Другие товары</a>
+                         <li class="nav-item">
+                             <a class="nav-link" href="./delivery.html">Доставка</a>
+                         </li>
+
+                         <li class="nav-item">
+                            <a class="nav-link" href="./contacts.html">Контакты</a>
+                 </li>
+             </div>
+            </li>
+         </ul>
+
+
+         
+         <div class="korz">
+                    <a href="#"><img src="./foto/basket2.png" alt="icon name"></a>
+                      </div>
+              <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
+                </form>
+            
+               <form action="http://ferroz.com.pl/katalog-tlumikow/#/">
+                       <button class="btn btn-danger" type="submit">Искать</button>
+                </form>
+ 
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-octicon-trashcan"></span>
+                 
+            </div>
+        </nav>
+    </header>
+
+    <div class="cart">
+		<div class="price"><a href="#" id="basketwidjet" onclick="cart.showWinow('bcontainer', 1)"></a></div>
+		<div style="text-align: center" style="color: red"; ><a href="#!" onclick="cart.clearBasket()">Очистить корзину</a></div>
+	</div>
+	
+	
+	<!---Форма для магазина------------------------------>
+	<div id="order" class="popup">
+	   <a href="#" onclick="cart.closeWindow('order', 0)" style="float:right">[закрыть]</a>
+	   <h4>Введите ваши контактные данные</h4>
+	   <form id="formToSend">
+	   <input id="fio" type="text" placeholder="Ваши фамилия и имя"  class="" />
+	   <input id="city" type="text" placeholder="Город"  class="text-input"/>
+	   <input id="phone" type="text" placeholder="Контактный телефон" class="text-input"/>
+	   <input id="email" type="text" placeholder="Электронная почта" class="" />
+	   <br>
+	   <textarea id="question" placeholder="Адрес"></textarea>
+	   </form>
+	   <button onclick="cart.sendOrder('formToSend,overflw,bsum');" href="#">Отправить заказ</button>
+	</div>
+	
+	<script>
+	  var cart;
+	  var config;
+	  var wiNumInputPrefID;
+	  $(document).ready(function(){  
+		cart = new WICard("cart");
+		config = {'clearAfterSend':true, 'showAfterAdd':false};
+		cart.init("basketwidjet", config);
+	 });	
+	  document.addEventListener('visibilitychange', function(e) {
+	  cart.init("basketwidjet", config);
+	 },
+	 false);
+	</script>
+	
+        <section class="one">
+                <img src="./foto/glushitel (2).jpg" class="img1" width="250">
+        
+                <p>
+                  <b> Глушитель</b> – эта часть выхлопной системы, которая борется с потоком газов и звуком.
+                   Она предназначена, в первую очередь, для гашения звука, и только во вторую - для снижения температуры.
+                   Газы, которые прошли катализатор, по трубам достигают сначала резонатора, а уже затем самого глушителя.
+
+                   Сейчас нет одинакового строения глушителя.
+                   Каждый производитель ищет свое решение и способы производства.<br/> 
+
+                   Производчтво глушитеяэ - это достаточно сложный цикл, ведь глушитель должен не только поглощать звук, 
+                   но и не лишать двигатель мощности. Как заверяют производители,
+                   машину можно сделать практически бесшумной, 
+                   установив еще один резонатор и нарастив объем 
+                   глушителя — вот только мощности от двигателя будет 
+                   отниматься значительно. Если штатный вариант отнимает 
+                   от 5 до 7%, то установка новых резонаторов увеличит этот показатель до 10 – 15%!
+                </p>
+
+        </section>
+ 
+       <section class="two">
+                <img src="./foto/razrez.jpg" class="img2" width="300">
+                <p>
+                    Какой <b>глушитель в разрезе</b>? Если представить его разрез,
+                    то это несколько перфорированных труб внутри металлического корпуса.
+                    Они находятся не на одном уровне, а как бы параллельны. Поток «отработки» — попадает в резонатор, 
+                    где встречается сначала со стенками, теряя свое давление и часть звука. Происходит это так: волна ударяется о стенку и возникает ответная волна, которая встречается с вновь поступившими газами – то есть энергия гасит сама себя.
+                     Затем в параллельную трубу поток проходит в другую камеру, там также встречается со стенкой, опять теряя часть энергии. Внизу этой камеры есть третья труба, по которой газы поступают уже до глушителя. Таким образом, на уровне резонатора, гасятся 30 – 40% давления газа и его звука (в основном низкие тона). Но почему не все? Если сделать резонато
+                    попросту не поместится под машиной в середине — будет слишком большой объем, который также скрадет мощность двигателя.
+                </p>
+       </section>
+
+    
+</body>
+</html>

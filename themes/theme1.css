@@ -1,0 +1,136 @@
+body{
+    width: 100%;
+    background: rgb(243, 248, 252);
+}
+
+h1{
+color: black;
+font: bold 20px Arial;
+text-align: center;
+margin-top: 30px ;
+}
+
+p{
+    font-size: 16px;
+}
+
+.price{
+margin: 10px;
+font: normal 16px Arial;
+border-radius: 5px;
+background: #F0F0F0;
+text-align: center;
+padding: 8px;
+}
+
+.v {
+border:1px solid rgb(14, 13, 13); 
+ border-radius: 3px;
+ padding: 10px;
+ margin: 10px;
+ width: 25%;
+ text-align: center;
+ background: rgb(205, 231, 248);
+}
+
+button{
+    background: #f84f4f;  
+}
+    
+.korz{
+    position: absolute;
+    border-radius: 50px;
+    background: #ffffff;
+    margin-left: 55%;
+    padding: 17px;
+}
+.cart{
+    width: 300px;
+    height: 70px;
+    position: absolute;
+    right: 320px;
+    margin-top: -110px;
+    padding: 10px;
+    font: normal 11px Arial;
+    }
+
+ .catalog{
+   width: 1024px;
+   margin: 80px auto;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   justify-content: space-around;
+   background: rgb(227, 239, 248);
+ }
+
+ @media screen and (max-width: 805px){
+    .price{
+       margin: 10px;
+       font: normal 12px Arial;
+       border-radius: 2px;
+       background: #F0F0F0;
+       text-align: center;
+       padding: 6px;
+   }
+   .catalog{
+       display: flex;
+       flex-direction: row;
+       flex-wrap: wrap;
+       height: 70%;
+       width: 70%; 
+    }
+   
+    .v {
+       border:1px solid rgb(14, 13, 13); 
+       border-radius: 2px;
+       padding: 5px;
+       margin: 5px;
+       width: 40%;
+       text-align: center;
+    }
+
+    .im{
+        width: 120px;
+        height: 60px;
+    }
+   }         
+   
+
+
+ @media screen and (max-width: 480px){
+
+    .price{
+        margin: 10px;
+        font: normal 10px Arial;
+        border-radius: 2px;
+        background: #F0F0F0;
+        text-align: center;
+        padding: 4px;
+    }
+    .catalog{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 70%;
+        width: 70%; 
+     }
+    
+     .v {
+        border:1px solid rgb(14, 13, 13); 
+        border-radius: 2px;
+        padding: 5px;
+        margin: 5px;
+        width: 50%;
+        text-align: center;
+     }
+
+ 
+  }
+           
+
+ 
+
+
+ 
+    

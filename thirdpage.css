@@ -1,0 +1,54 @@
+body{
+    position:relative;
+    width:100%;
+    
+       
+        /*max-width:1024px;
+        margin:0 auto;
+        margin-top:0px; */
+       
+    }
+    
+    
+   
+
+.one{
+    margin: 10px;
+    padding: 10px;
+    margin-top: 30px;
+    
+   
+}
+p{
+    margin: 20px;
+    padding: 20px;
+    text-indent: 1.5em;
+    text-align: justify;
+}
+
+.two{
+    margin: 10px;
+    padding: 10px;
+    float: left; 
+}
+
+img{
+    float: left;
+    padding: 5px;
+}
+
+ img:hover{
+        transform: scale(1.5);
+        transition: all 0.5s ease-out;
+}
+section{
+    background: rgb(199, 238, 250);
+}
+
+.korz{
+    border-radius: 70px;
+    background: #ffffff;
+    margin-right: 5%;
+    padding: 17px;
+}
+

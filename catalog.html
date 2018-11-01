@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="themes/theme1.css" />
+	<link rel="stylesheet" type="text/css" href="wicart.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+	<script src="wicart.js"  type="text/javascript" ></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+			crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+			crossorigin="anonymous"></script>
+			
+	<title>Корзина</title>
+</head>
+
+<body>
+	<header class="p-3 mb-2 bg-info text-white">
+		<nav class="navbar navbar-expand-md navbar-dark">
+			<img src="./foto/logo.jpg" width="80" height="80"> <!-- Рисунок логотипа-->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbar1" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+	 <div class="collapse navbar-collapse" id="navbar1">
+		  <h1>Глушители Ferroz</h1>
+			 <ul class="navbar-nav mr-auto">
+
+			   <!--menu-->
+				 <li class="nav-item active">
+					<a class="nav-link" href="./main.html" >Главная
+						<span class="sr-only"></span>
+					</a>
+				 </li>
+
+				<li class="nav-item dropdown">
+				   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true"
+					 aria-expanded="false">Каталог товаров</a>
+				   <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+					   <a class="dropdown-item" href="./catalog.html">Глушители</a>
+					   <a class="dropdown-item" href="./catalog.html">Гофры</a>
+					   <a class="dropdown-item" href="./catalog.html">Пламегасители</a>
+					   <a class="dropdown-item" href="./catalog.html">катализаторы</a>
+						<div class="dropdown-divider"></div>
+						   <a class="dropdown-item" href="./catalog.html">Другие товары</a>
+						 <li class="nav-item">
+							 <a class="nav-link" href="./delivery.html">Доставка</a>
+						 </li>
+
+						 <li class="nav-item">
+							<a class="nav-link" href="./contacts.html">Контакты</a>
+				 </li>
+			 </div>
+			</li>
+		 </ul>
+		 <div class="korz">
+					<a href="#"><img src="./foto/basket2.png" alt="icon name"></a>
+					  </div>
+			  <form class="form-inline my-2 my-lg-0">
+					<input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
+				</form>
+			
+			   <form action="http://ferroz.com.pl/katalog-tlumikow/#/">
+					   <button class="btn btn-danger" type="submit">Искать</button>
+				</form>
+ 
+				<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+				<span class="glyphicon glyphicon-octicon-trashcan"></span>
+				 
+			</div>
+		</nav>
+	</header>
+	
+	<div class="cart">
+		<div class="price"><a href="#" id="basketwidjet" onclick="cart.showWinow('bcontainer', 1)"></a></div>
+		<div style="text-align: center"; ><a href="#!" onclick="cart.clearBasket()">Очистить корзину</a></div>
+	</div>
+	
+	
+	<!---Форма для магазина------------------------------>
+	<div id="order" class="popup">
+	   <a href="#" onclick="cart.closeWindow('order', 0)" style="float:right">[закрыть]</a>
+	   <h4>Введите ваши контактные данные</h4>
+	   <form id="formToSend">
+	   <input id="fio" type="text" placeholder="Ваши фамилия и имя"  class="" />
+	   <input id="city" type="text" placeholder="Город"  class="text-input"/>
+	   <input id="phone" type="text" placeholder="Контактный телефон" class="text-input"/>
+	   <input id="email" type="text" placeholder="Электронная почта" class="" />
+	   <br>
+	   <textarea id="question" placeholder="Адрес"></textarea>
+	   </form>
+	   <button onclick="cart.sendOrder('formToSend,overflw,bsum');" href="#">Отправить заказ</button>
+	</div>
+	
+	<script>
+	  var cart;
+	  var config;
+	  var wiNumInputPrefID;
+	  $(document).ready(function(){  
+		cart = new WICard("cart");
+		config = {'clearAfterSend':true, 'showAfterAdd':false};
+		cart.init("basketwidjet", config);
+	 });	
+	  document.addEventListener('visibilitychange', function(e) {
+	  cart.init("basketwidjet", config);
+	 },
+	 false);
+	</script>
+
+<script>
+    let priceList = {
+	"001" : {"id" : "001", "subid" : {}, "name" : "Глушитель", "price" : "65"},
+	"002" : {"id" : "002", "subid" : {}, "name" : "Глушитель", "price" : "90"},
+	"003" : {"id" : "003", "subid" : {}, "name" : "Гофра", "price" : "27"},
+	"004" : {"id" : "004", "subid" : {}, "name" : "Гофра", "price" : "22"},
+	"005" : {"id" : "005", "subid" : {}, "name" : "Хомут", "price" : "17"},
+	"006" : {"id" : "006", "subid" : {}, "name" : "Хомут", "price" : "18"},
+	"007" : {"id" : "007", "subid" : {}, "name" : "Пламегаситель", "price" : "40"},
+	"008" : {"id" : "008", "subid" : {}, "name" : "Пламегаситель", "price" : "38"},
+	"009" : {"id" : "009", "subid" : {}, "name" : "Прокладка", "price" : "5"},
+	"010" : {"id" : "010", "subid" : {}, "name" : "Прокладка", "price" : "6"},
+	"011" : {"id" : "011", "subid" : {}, "name" : "Подвес", "price" : "8"},
+	"012" : {"id" : "012", "subid" : {}, "name" : "Подвес", "price" : "7"},
+	"013" : {"id" : "011", "subid" : {}, "name" : "Резонатор", "price" : "75"},
+	"014" : {"id" : "012", "subid" : {}, "name" : "Резонатор", "price" : "68"}
+	};
+</script>
+	
+<h1>Каталог товаров</h1>
+
+<div class="catalog">
+<div class="v">
+<div><img class="im" src="foto/glushit.jpg"  width="200px" height="100px" alt="деталь"/></div>
+<h4>Глушитель</h4>
+<p>Цена: <span class="wicartprice" id="wicartprice_001">65</span> руб.</p>	
+<button id="wicartbutton_001" onclick="cart.addToCart(this, '001', priceList['001'])">В корзину</button>
+</div>
+
+<div class="v">
+<div><img class="im" src="foto/glushitel (2).jpg"  width="200px" height="100px" alt="деталь" /></div>
+<h4>Глушитель</h4>
+<p>Цена: <span class="wicartprice" id="wicartprice_002">90</span> руб.</p>	
+<button id="wicartbutton_002" onclick="cart.addToCart(this, '002', priceList['002'])">В корзину</button>
+</div>
+
+<div class="v">
+<div><img class="im" src="foto/gofra.jpg"  width="200px" height="100px" alt="деталь"/></div>
+<h4>Гофра</h4>
+<p>Цена: <span class="wicartprice" id="wicartprice_003">27</span> руб.</p>	
+<button id="wicartbutton_003" onclick="cart.addToCart(this, '003', priceList['003'])">В корзину</button>
+</div>
+		
+<div class="v">
+<div><img class="im" src="foto/gofra1.jpg"  width="200px" height="100px" alt="деталь" /></div>
+<h4>Гофра</h4>
+<p>Цена: <span class="wicartprice" id="wicartprice_004">22</span> руб.</p>	
+<button id="wicartbutton_004" onclick="cart.addToCart(this, '004', priceList['004'])">В корзину</button>
+</div>
+
+<div class="v">
+<div><img class="im" src="foto/homut.jpg"  width="200px" height="100px" alt="деталь" /></div>
+<h4>Хомут</h4>
+<p>Цена: <span class="wicartprice" id="wicartprice_005">17</span> руб.</p>	
+<button id="wicartbutton_005" onclick="cart.addToCart(this, '005', priceList['005'])">В корзину</button>
+</div>
+
+<div class="v">
+<div><img class="im" src="foto/homut1.jpg" width="200px" height="100px" alt="деталь"/></div>
+<h4>Хомут</h4>
+<p>Цена: <span class="wicartprice" id="wicartprice_006">18</span> руб.</p>
+<button id="wicartbutton_006" onclick="cart.addToCart(this, '006', priceList['006'])">В корзину</button>
+</div>
+
+<div class="v">
+<div><img class="im" src="foto/plamegasit.jpg"  width="200px" height="100px" alt="деталь"/></div>
+<p>Пламегаситель</p>
+<p>Цена: <span class="wicartprice" id="wicartprice_007">40</span> руб.</p>	
+<button id="wicartbutton_007" onclick="cart.addToCart(this, '007', priceList['007'])">В корзину</button>
+</div>
+
+<div class="v">
+<div><img class="im" src="foto/plamegasit1.jpg"  width="200px" height="100px" alt="деталь"/></div>
+<p>Пламегаситель</p>
+<p>Цена: <span class="wicartprice" id="wicartprice_008">38</span> руб.</p>	
+<button id="wicartbutton_008" onclick="cart.addToCart(this, '008', priceList['008'])">В корзину</button>
+</div>
+
+<div class="v">
+<div><img class="im" src="foto/prokladka.jpg"  width="200px" height="100px" alt="деталь"/></div>
+<h4>Прокладка</h4>
+<p>Цена: <span class="wicartprice" id="wicartprice_009">5</span> руб.</p>	
+<button id="wicartbutton_009" onclick="cart.addToCart(this, '009', priceList['009'])">В корзину</button>
+</div>
+
+<div class="v">
+<div><img class="im" src="foto/prokladka1.jpg"  width="200px" height="100px" alt="деталь"/></div>
+<h4>Прокладка</h4>
+<p>Цена: <span class="wicartprice" id="wicartprice_010">6</span> руб.</p>	
+<button id="wicartbutton_010" onclick="cart.addToCart(this, '010', priceList['010'])">В корзину</button>
+</div>
+
+<div class="v">
+<div><img class="im" src="foto/podves.jpg"  width="200px" height="100px" alt="деталь" /></div>
+<h4>Подвес</h4>
+<p>Цена: <span class="wicartprice" id="wicartprice_011">8</span> руб.</p>	
+<button id="wicartbutton_011" onclick="cart.addToCart(this, '011', priceList['011'])">В корзину</button>
+</div>
+
+<div class="v">
+<div><img class="im" src="foto/podves1.jpg"  width="200px" height="100px" alt="деталь"/></div>
+<h4>Подвес</h4>
+<p>Цена: <span class="wicartprice" id="wicartprice_012">7</span> руб.</p>	
+<button id="wicartbutton_012" onclick="cart.addToCart(this, '012', priceList['012'])">В корзину</button>
+</div>
+
+<div class="v">
+<div><img class="im" src="foto/resonat.jpg"  width="200px" height="100px" alt="деталь"/></div>
+<h4>Резонатор</h4>
+<p>Цена: <span class="wicartprice" id="wicartprice_013">75</span> руб.</p>	
+<button id="wicartbutton_013" onclick="cart.addToCart(this, '013', priceList['013'])">В корзину</button>
+</div>
+
+<div class="v">
+<div><img class="im" src="foto/resonat1.jpg"  width="200px" height="100px" alt="деталь"/></div>
+<h4>Резонатор</h4>
+<p>Цена: <span class="wicartprice" id="wicartprice_014">68</span> руб.</p>	
+<button id="wicartbutton_014" onclick="cart.addToCart(this, '014', priceList['014'])">В корзину</button>
+</div>
+
+<div class="v">
+	<div><img class="im" src="foto/glushit2.jpg"  width="200px" height="100px" alt="деталь"/></div>
+	<h4>Глушитель</h4>
+	<p>Цена: <span class="wicartprice" id="wicartprice_015">80</span> руб.</p>	
+	<button id="wicartbutton_015" onclick="cart.addToCart(this, '015', priceList['015'])">В корзину</button>
+	</div>
+</div>
+						
+
+
+</body>
+</html>

@@ -1,20 +1,19 @@
+header, footer{
+    background: rgb(163, 209, 240);
+}
+
 body{
-width: 100%;
-position:relative;
-margin:0 auto;
-margin-top:0px; 
-background: rgb(220, 240, 248);
-}
+      width: 100%;
+      position:relative;
+      margin:0 auto;
+      margin-top:0px; 
+ }
 
-section{
-    background: rgb(208, 243, 243);
-}
-
-h1{
+ h1{
     text-align: center;
     margin: 10px;
     padding: 10px;
-}
+ }
 
 p{
     text-indent: 1.5em;
@@ -38,14 +37,23 @@ p{
     margin-left: 400px;
    
 }*/
+.cart{
+    width: 300px;
+    height: 70px;
+    position: absolute;
+    right: 320px;
+    margin-top: -110px;
+    padding: 10px;
+    font: normal 11px Arial;
+    }
 
 @media screen and (max-width: 805px){
     p{
         text-indent: 1.5em;
         text-align: justify;
-        margin: 10px;
-        
+        margin: 10px; 
     }
+
 }
   
 

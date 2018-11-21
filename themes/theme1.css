@@ -3,18 +3,22 @@ body{
     background: rgb(243, 248, 252);
 }
 
-h1{
+header, footer{
+    background: rgb(163, 209, 240);
+}
+
+ h1{
 color: black;
 font: bold 20px Arial;
 text-align: center;
 margin-top: 30px ;
 }
 
-p{
+ p{
     font-size: 16px;
 }
 
-.price{
+ .price{
 margin: 10px;
 font: normal 16px Arial;
 border-radius: 5px;
@@ -23,7 +27,7 @@ text-align: center;
 padding: 8px;
 }
 
-.v {
+ .v {
 border:1px solid rgb(14, 13, 13); 
  border-radius: 3px;
  padding: 10px;
@@ -33,18 +37,18 @@ border:1px solid rgb(14, 13, 13);
  background: rgb(205, 231, 248);
 }
 
-button{
+ button{
     background: #f84f4f;  
 }
     
-.korz{
+ .korz{
     position: absolute;
     border-radius: 50px;
     background: #ffffff;
     margin-left: 55%;
     padding: 17px;
 }
-.cart{
+ .cart{
     width: 300px;
     height: 70px;
     position: absolute;
@@ -94,6 +98,7 @@ button{
         width: 120px;
         height: 60px;
     }
+    
    }         
    
 

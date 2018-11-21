@@ -12,6 +12,13 @@ p{
     padding: 17px;
 }
 
+.card-header{
+    width: 100%;
+}
+.card-body{
+    width: 100%;
+}
+
 @media screen and (max-width: 805px){
     p{
         margin: 10px;

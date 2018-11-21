@@ -5,17 +5,21 @@ body{
     margin-top:0px;
 }
 
+header{
+    background: rgb(163, 209, 240);
+}
+
 li{
     list-style-type: none; /* Убираем маркеры */
     margin-top: 20px;
 }
 
+
 .one{
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
-    padding: 20px;
 }
-
 .korz{
     position: fixed;
     border-radius: 50px;
@@ -33,17 +37,11 @@ li{
     font: normal 11px Arial;
     }
 
-
 @media screen and (max-width: 805px){
-    .one{
-        display: flex;
-        flex-direction: column;
-    }
-    script{
-        width: 50%;
-        height: 50%;
-    }
-   
+.one{
+   display: flex;
+   flex-direction: column;
+  }
 }
 
 

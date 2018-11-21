@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <header class="p-3 mb-2 bg-info text-white">
+    <header class="p-3 mb-2 text-white">
         <nav class="navbar navbar-expand-md navbar-dark">
             <img src="./foto/logo.jpg" width="80" height="80"> <!-- Рисунок логотипа-->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbar1" aria-expanded="false"
@@ -29,16 +29,15 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-     <div class="collapse navbar-collapse" id="navbar1">
+    <div class="collapse navbar-collapse" id="navbar1">
           <h1>Глушители Ferroz</h1>
-             <ul class="navbar-nav mr-auto">
-
-               <!--menu-->
-                 <li class="nav-item active">
-                    <a class="nav-link" href="./main.html" >Главная
-                        <span class="sr-only"></span>
-                    </a>
-                 </li>
+            <ul class="navbar-nav mr-auto">
+                   <!--menu-->
+                <li class="nav-item active">
+                  <a class="nav-link" href="./index.html" >Главная
+                    <span class="sr-only"></span>
+                  </a>
+                </li>
 
                 <li class="nav-item dropdown">
                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -56,25 +55,27 @@
 
                          <li class="nav-item">
                             <a class="nav-link" href="./contacts.html">Контакты</a>
-                 </li>
-             </div>
-            </li>
-         </ul>
+                         </li>
+                    </div>
+                </li>
+            </ul>
+
          <div class="korz">
-                    <a href="#"><img src="./foto/basket2.png" alt="icon name"></a>
-                      </div>
-              <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
-                </form>
+            <a href="#"><img src="./foto/basket2.png" alt="icon name"></a>
+         </div>
+
+          <form class="form-inline my-2 my-lg-0">
+             <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
+          </form>
             
-               <form action="http://ferroz.com.pl/katalog-tlumikow/#/">
-                       <button class="btn btn-danger" type="submit">Искать</button>
-                </form>
+          <form action="http://ferroz.com.pl/katalog-tlumikow/#/">
+              <button class="btn btn-danger" type="submit">Искать</button>
+          </form>
  
-                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                <span class="glyphicon glyphicon-octicon-trashcan"></span>
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            <span class="glyphicon glyphicon-octicon-trashcan"></span>
                  
-            </div>
+    </div>
         </nav>
     </header>
 
@@ -113,26 +114,65 @@
 	 },
 	 false);
 	</script>
-	
-
-<section>
     
-    <p>
-        Мы предоставляем <b>бесплатную доставку</b> по г. Минску (в пределах кольцевой) при заказе <b>от 90 BYN</b>.
-        При заказе до 90 BYN доставка - 10 руб. в пределах МКАД.<br/>
-        Доставка день в день осуществляется при оформлении заказа до 14 часов.<br/><br/>
-       <b> Самовывоз:</b> <br/>
-        Вы можете получить заказ непосредственно в наших <b>павильонах 17, 29 (3 этаж)</b>
-        автомобильных запчастей расположенном по адресу г. Минск, ул. Некрасова, 73. <br/>
-        Самовывоз из нашего торгового места следует выбирать, если Вы 
-        можете забрать заказ самостоятельно или через доверенное лицо.<br/><br/>
+    <section>
 
-       <b> Курьером до двери:</b><br/>
-         Доставка нашим курьером осуществляется ежедневно с 11:00 до 21:00 в пределах Минска. <br/><br/>
+    <style>
+      body{
+        background-color: rgb(232, 239, 243);
+        }
+    </style>
+    
+    
+<div class="container">
+    <div id="accordion">
+       <div class="card">
+            <div class="card-header">
+              <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                 Доставка
+               </a>
+            </div>
+     <div id="collapseOne" class="collapse show" data-parent="#accordion">
+            <div class="card-body">
+                 <p>
+                     Мы предоставляем <b>бесплатную доставку</b> по г. Минску (в пределах кольцевой) при заказе <b>от 90 BYN</b>.
+                     При заказе до 90 BYN доставка - 10 руб. в пределах МКАД.<br/>
+                     Доставка день в день осуществляется при оформлении заказа до 14 часов.<br/><br/>
+                     <b> Курьером до двери:</b><br/>
+                    Доставка нашим курьером осуществляется ежедневно с 11:00 до 21:00 в пределах Минска. <br/><br/>
+                    В стоимость реализуемых нами запчастей, мы НЕ закладывали цену доставки, стоимость аренды, 
+                    расходов на рекламу и т.д. 
+                </p>  
+            </div>
+     </div>
+     </div>
 
-          В стоимость реализуемых нами запчастей, мы НЕ закладывали цену доставки, стоимость аренды, 
-          расходов на рекламу и т.д. 
-    </p>
-    </section>
+        <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                        Самовывоз
+                    </a>
+                </div>
+    
+                <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                            Вы можете получить заказ непосредственно в наших <b>павильонах 17, 29 (3 этаж)</b>
+                            автомобильных запчастей расположенном по адресу г. Минск, ул. Некрасова, 73. <br/>
+                            Самовывоз из нашего торгового места следует выбирать, если Вы 
+                            можете забрать заказ самостоятельно или через доверенное лицо.<br/><br/>                              
+                        </p>  
+                    </div>
+                </div>
+    
+            </div>
+    
+        </div>
+        </div>
+    
+        
+        
+               
+       
+     </section>
 </body>
 </html>
